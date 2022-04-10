@@ -1,5 +1,7 @@
-import cluster from 'cluster';
+import * as _cluster from 'cluster';
 import * as os from 'os';
+
+const cluster = _cluster as unknown as _cluster.Cluster;
 
 export class Cluster {
     static register(workers: Number, callback: Function): void {
